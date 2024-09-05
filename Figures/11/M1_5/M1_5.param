@@ -1,0 +1,90 @@
+# Microscope and probe settings
+AcceleratingVoltage 200000
+# lambda 0.0250793
+Z 100
+Cs -2000
+alpha_max 0.026
+
+# Specimen settings
+specimen_path ../../../Specimen/M1_blank.xyz
+tile_x 4
+tile_y 3
+tile_z 1
+
+# Simulation mode
+device CPU
+domain FourierSpace
+propagator Full
+inputwave Gaussian
+frozen_phonon_iterations 1
+
+# Multislice settings
+req_simulation_pixel_size_x 0.0825547
+req_simulation_pixel_size_y 0.0780674
+probe_radius 10
+propagation_window_size 24
+propagation_window_test 5
+slice_thickness 1.9504
+potential_bound 0.5
+detector_stepsize 1
+hires_supersampling_factor 2
+propagator_rank 10000
+min_propagator_radius 1
+fs_buffer_zone -1
+
+# Simulation window settings
+req_probe_step_x 0.2
+req_probe_step_y 0.2
+simulation_bounds_x0 0
+simulation_bounds_x1 1
+simulation_bounds_y0 0
+simulation_bounds_y1 1
+
+# Input wave settings
+max_probe_approximation_error 0.1
+approximation_max_input_waves -1
+approximation_downsampling_factor 2
+input_wave_lattice_r 2
+trig_poly_degree -1
+input_wave_square_len 2
+input_wave_disk_radius 1
+input_wave_pixel_propagation_window_size 1
+input_wave_gaussian_sigma 0
+input_wave_fsdirac_use_ideal_frequencies true
+input_wave_fsdirac_px_beyond_aperture 0
+test_max_num_input_waves_start 260
+test_max_num_input_waves_decrement 2
+
+# Output settings
+outputDir Output_M1_5
+writeInitData true
+writeSlices true
+writeProbeApproximationOutput true
+writeLMAStrategySearchOutput true
+writePartialSTEMOutput false
+verboseLMASearch false
+save3DSTEM false
+bf_min 0
+bf_max 15
+adf_min 16
+adf_max 40
+haadf_min 41
+haadf_max 200
+
+# Additional program settings
+max_num_threads 36
+memory_limit_MB 50000
+lma_strategy_computation_level 2
+gpu_use_half_precision false
+gpu_num_propagation_windows 1
+write_convoblast_debug_output false
+
+# Additional settings for recomputing local changes
+recomputation_count 0
+recomputation_change_tile_x 0
+recomputation_change_tile_y 0
+recomputation_change_tile_z 0
+recomputation_generate_columns false
+recomputation_generate_columns_x 0
+recomputation_generate_columns_y 0
+

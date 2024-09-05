@@ -1,0 +1,66 @@
+# Microscope and probe settings
+AcceleratingVoltage 200000
+Z 100
+Cs -2000
+alpha_max 26e-3
+
+# Specimen settings
+specimen_path ../../../Specimen/Sample.xyz
+tile_x 8
+tile_y 8
+tile_z 1
+
+# Simulation mode
+device      CPU
+domain      FourierSpace
+propagator  Full
+inputwave   ProbeSubset
+frozen_phonon_iterations 1
+
+# Multislice settings
+req_simulation_pixel_size_x 0.06095314
+req_simulation_pixel_size_y 0.06095314
+probe_radius 10.0
+propagation_window_size 0
+slice_thickness 1.9504
+#slice_thickness 0.4876
+potential_bound 0.5
+detector_stepsize 1
+hires_supersampling_factor 2
+propagator_rank 10000
+min_propagator_radius 1
+fs_buffer_zone -1
+
+# Simulation window settings
+req_probe_step_x 0.2
+req_probe_step_y 0.2
+simulation_bounds_x0 0.3
+simulation_bounds_x1 0.6
+simulation_bounds_y0 0.4
+simulation_bounds_y1 0.7
+
+# Input wave settings
+max_probe_approximation_error 0.03
+approximation_max_input_waves 200
+approximation_downsampling_factor 2
+input_wave_lattice_r 2
+
+# Output settings
+outputDir Output
+writeInitData true
+writeSlices true
+writeProbeApproximationOutput true
+writeLMAStrategySearchOutput true
+writePartialSTEMOutput true
+verboseLMASearch true
+save3DSTEM false
+bf_min 0
+bf_max 15
+adf_min 16
+adf_max 40
+haadf_min 41
+haadf_max 200
+
+# Additional program settings
+memory_limit_MB 500
+lma_strategy_computation_level 3

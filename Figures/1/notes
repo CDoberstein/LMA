@@ -1,0 +1,5 @@
+In order to reproduce the images from Figure 1, lines 39 to 62 in Source/CPU/MSData_aux.h
+should be uncommented before compiling the program and running it with Figure1.param as
+input parameters. The variable 'f' on line 39 should be set to 1, 2 and 4 respectively.
+The resulting images can then be found in the Output/MSData/Probe directory (note that
+the images will be there long before the simulation is completed)
